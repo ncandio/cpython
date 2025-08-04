@@ -37,7 +37,7 @@ for efficient 2D point operations including:
 - Memory-efficient design with smart pointers
 - Exception-safe implementation
     '''.strip(),
-    author='Claude Code',
+    author='CPython Contributor',
     ext_modules=[quadtree_module],
     zip_safe=False,
     python_requires='>=3.6',
