@@ -42,6 +42,7 @@
 @MODULE__RANDOM_TRUE@_random _randommodule.c
 @MODULE__REMOTE_DEBUGGING_TRUE@_remote_debugging _remote_debugging_module.c
 @MODULE__STRUCT_TRUE@_struct _struct.c
+@MODULE_QUADTREE_TRUE@quadtree quadtree.cpp
 
 # build supports subinterpreters
 @MODULE__INTERPRETERS_TRUE@_interpreters _interpretersmodule.c

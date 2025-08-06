@@ -7930,6 +7930,7 @@ PY_STDLIB_MOD([_socket],
   [], m4_flatten([test "$ac_cv_header_sys_socket_h" = "yes"
                     -a "$ac_cv_header_sys_types_h" = "yes"
                     -a "$ac_cv_header_netinet_in_h" = "yes"]), [], [$SOCKET_LIBS])
+PY_STDLIB_MOD([quadtree], [], [true], [-std=c++17])
 
 dnl platform specific extensions
 PY_STDLIB_MOD([grp], [],
