@@ -1,0 +1,116 @@
+{
+  "timestamp": 1754473837.8310905,
+  "success_rate": 100.0,
+  "total_tests": 13,
+  "passed_tests": 13,
+  "failed_tests": 0,
+  "total_time": 11.533933877944946,
+  "peak_memory_mb": 50.58203125,
+  "production_ready": true,
+  "test_results": [
+    {
+      "name": "API Completeness",
+      "passed": true,
+      "execution_time": 0.00017714500427246094,
+      "memory_peak_mb": 0.00067901611328125,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Data Integrity",
+      "passed": true,
+      "execution_time": 0.00010085105895996094,
+      "memory_peak_mb": 0.00095367431640625,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Boundary Validation",
+      "passed": true,
+      "execution_time": 3.24249267578125e-05,
+      "memory_peak_mb": 0,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Insertion Performance",
+      "passed": true,
+      "execution_time": 0.42415452003479004,
+      "memory_peak_mb": 8.230911254882812,
+      "operations_per_second": 217156.95157347128,
+      "error_message": ""
+    },
+    {
+      "name": "Query Performance",
+      "passed": true,
+      "execution_time": 9.225005626678467,
+      "memory_peak_mb": 1.1000232696533203,
+      "operations_per_second": 218.25708951745392,
+      "error_message": ""
+    },
+    {
+      "name": "Collision Performance",
+      "passed": true,
+      "execution_time": 0.9992091655731201,
+      "memory_peak_mb": 16.209864616394043,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Memory Scalability",
+      "passed": true,
+      "execution_time": 0.2769966125488281,
+      "memory_peak_mb": 1.2057113647460938,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Large Dataset Handling",
+      "passed": true,
+      "execution_time": 0.19462966918945312,
+      "memory_peak_mb": 0.027679443359375,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Precision Edge Cases",
+      "passed": true,
+      "execution_time": 4.982948303222656e-05,
+      "memory_peak_mb": 0,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Extreme Values",
+      "passed": true,
+      "execution_time": 0.03741288185119629,
+      "memory_peak_mb": 0,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Error Conditions",
+      "passed": true,
+      "execution_time": 3.933906555175781e-05,
+      "memory_peak_mb": 0,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Thread Safety",
+      "passed": true,
+      "execution_time": 0.2139720916748047,
+      "memory_peak_mb": 0.2745389938354492,
+      "operations_per_second": 0,
+      "error_message": ""
+    },
+    {
+      "name": "Memory Leaks",
+      "passed": true,
+      "execution_time": 0.1621537208557129,
+      "memory_peak_mb": 50.58203125,
+      "operations_per_second": 0,
+      "error_message": ""
+    }
+  ]
+}

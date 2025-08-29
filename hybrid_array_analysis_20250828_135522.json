@@ -1,0 +1,424 @@
+{
+  "comparison": {
+    "N_2": {
+      "n_value": 2,
+      "node_count": 100000,
+      "original_memory_mb": 10.2996826171875,
+      "auto_memory_mb": 13.885498046875,
+      "hybrid_memory_mb": 6.293950080871582,
+      "original_memory_per_node": 108.0,
+      "auto_memory_per_node": 145.6,
+      "hybrid_memory_per_node": 65.99685,
+      "hybrid_traversal_speedup": 0.7751109533847043,
+      "hybrid_search_speedup": 0.775186905257739,
+      "hybrid_cache_efficiency": 0.5950212451592499,
+      "hybrid_array_hit_ratio": 7e-05,
+      "hybrid_array_nodes": 7,
+      "hybrid_pointer_nodes": 99993,
+      "hybrid_array_memory_mb": 0.000133514404296875,
+      "hybrid_pointer_memory_mb": 6.10308837890625,
+      "memory_improvement_vs_original": 38.89180555555555,
+      "memory_improvement_vs_auto": 54.67249313186813
+    },
+    "N_3": {
+      "n_value": 3,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.293692588806152,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.99415,
+      "hybrid_traversal_speedup": 0.775206061673863,
+      "hybrid_search_speedup": 0.7753471181339506,
+      "hybrid_cache_efficiency": 0.59503945554925,
+      "hybrid_array_hit_ratio": 0.00013,
+      "hybrid_array_nodes": 13,
+      "hybrid_pointer_nodes": 99987,
+      "hybrid_array_memory_mb": 0.000247955322265625,
+      "hybrid_pointer_memory_mb": 6.10272216796875,
+      "memory_improvement_vs_original": 33.204301619433195,
+      "memory_improvement_vs_auto": 51.474889705882354
+    },
+    "N_4": {
+      "n_value": 4,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.293349266052246,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.99055,
+      "hybrid_traversal_speedup": 0.7753328804628667,
+      "hybrid_search_speedup": 0.7755607473203554,
+      "hybrid_cache_efficiency": 0.59506373643325,
+      "hybrid_array_hit_ratio": 0.00021,
+      "hybrid_array_nodes": 21,
+      "hybrid_pointer_nodes": 99979,
+      "hybrid_array_memory_mb": 0.000400543212890625,
+      "hybrid_pointer_memory_mb": 6.10223388671875,
+      "memory_improvement_vs_original": 33.207945344129556,
+      "memory_improvement_vs_auto": 51.477536764705874
+    },
+    "N_5": {
+      "n_value": 5,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.292920112609863,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.98605,
+      "hybrid_traversal_speedup": 0.775491416383622,
+      "hybrid_search_speedup": 0.7758278031186959,
+      "hybrid_cache_efficiency": 0.5950940881232499,
+      "hybrid_array_hit_ratio": 0.00031,
+      "hybrid_array_nodes": 31,
+      "hybrid_pointer_nodes": 99969,
+      "hybrid_array_memory_mb": 0.000591278076171875,
+      "hybrid_pointer_memory_mb": 6.10162353515625,
+      "memory_improvement_vs_original": 33.2125,
+      "memory_improvement_vs_auto": 51.48084558823529
+    },
+    "N_8": {
+      "n_value": 8,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.2911176681518555,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.96715,
+      "hybrid_traversal_speedup": 0.776157418133936,
+      "hybrid_search_speedup": 0.7769496718460478,
+      "hybrid_cache_efficiency": 0.5952215723192499,
+      "hybrid_array_hit_ratio": 0.00073,
+      "hybrid_array_nodes": 73,
+      "hybrid_pointer_nodes": 99927,
+      "hybrid_array_memory_mb": 0.001392364501953125,
+      "hybrid_pointer_memory_mb": 6.09906005859375,
+      "memory_improvement_vs_original": 33.231629554655875,
+      "memory_improvement_vs_auto": 51.49474264705882
+    },
+    "N_10": {
+      "n_value": 10,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.289486885070801,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.95005,
+      "hybrid_traversal_speedup": 0.7767602011900072,
+      "hybrid_search_speedup": 0.7779650221992097,
+      "hybrid_cache_efficiency": 0.5953369250432498,
+      "hybrid_array_hit_ratio": 0.00111,
+      "hybrid_array_nodes": 111,
+      "hybrid_pointer_nodes": 99889,
+      "hybrid_array_memory_mb": 0.002117156982421875,
+      "hybrid_pointer_memory_mb": 6.09674072265625,
+      "memory_improvement_vs_original": 33.248937246963564,
+      "memory_improvement_vs_auto": 51.50731617647059
+    },
+    "N_16": {
+      "n_value": 16,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.282534599304199,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.87715,
+      "hybrid_traversal_speedup": 0.7793321998302934,
+      "hybrid_search_speedup": 0.7822970992811913,
+      "hybrid_cache_efficiency": 0.59582879721925,
+      "hybrid_array_hit_ratio": 0.00273,
+      "hybrid_array_nodes": 273,
+      "hybrid_pointer_nodes": 99727,
+      "hybrid_array_memory_mb": 0.005207061767578125,
+      "hybrid_pointer_memory_mb": 6.08685302734375,
+      "memory_improvement_vs_original": 33.32272267206478,
+      "memory_improvement_vs_auto": 51.56091911764706
+    },
+    "N_32": {
+      "n_value": 32,
+      "node_count": 100000,
+      "original_memory_mb": 9.42230224609375,
+      "auto_memory_mb": 12.969970703125,
+      "hybrid_memory_mb": 6.248888969421387,
+      "original_memory_per_node": 98.8,
+      "auto_memory_per_node": 136.0,
+      "hybrid_memory_per_node": 65.52435,
+      "hybrid_traversal_speedup": 0.7918307249443776,
+      "hybrid_search_speedup": 0.8033419154439702,
+      "hybrid_cache_efficiency": 0.59821162605925,
+      "hybrid_array_hit_ratio": 0.01057,
+      "hybrid_array_nodes": 1057,
+      "hybrid_pointer_nodes": 98943,
+      "hybrid_array_memory_mb": 0.020160675048828125,
+      "hybrid_pointer_memory_mb": 6.03900146484375,
+      "memory_improvement_vs_original": 33.6798076923077,
+      "memory_improvement_vs_auto": 51.82033088235294
+    },
+    "metadata": {
+      "timestamp": "2025-08-28T13:55:22.949573",
+      "analysis_type": "comprehensive_implementation_comparison",
+      "implementations_compared": [
+        "original_lazy",
+        "auto_rebalancing",
+        "hybrid_array"
+      ],
+      "max_nodes_analyzed": 100000,
+      "array_levels_tested": 3
+    }
+  },
+  "performance_projections": {
+    "N_2": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8176226436081442,
+        "cache_adjusted_speedup": 0.8993849079689586,
+        "projected_improvement_percent": -10.061509203104135,
+        "memory_efficiency": 0.5950212451592499,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8176074532335373,
+        "cache_adjusted_speedup": 0.8584878258952142,
+        "projected_improvement_percent": -14.151217410478578,
+        "memory_efficiency": 0.5950212451592499,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8176530243573582,
+        "cache_adjusted_speedup": 0.9811836292288298,
+        "projected_improvement_percent": -1.8816370771170154,
+        "memory_efficiency": 0.5950212451592499,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9875706670669591,
+        "cache_adjusted_speedup": 1.0369492004203071,
+        "projected_improvement_percent": 3.694920042030714,
+        "memory_efficiency": 0.5950212451592499,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_3": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8177277724445029,
+        "cache_adjusted_speedup": 0.8995005496889532,
+        "projected_improvement_percent": -10.049945031104679,
+        "memory_efficiency": 0.59503945554925,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8176995611524855,
+        "cache_adjusted_speedup": 0.8585845392101099,
+        "projected_improvement_percent": -14.141546078989009,
+        "memory_efficiency": 0.59503945554925,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.817784195028538,
+        "cache_adjusted_speedup": 0.9813410340342457,
+        "projected_improvement_percent": -1.8658965965754337,
+        "memory_efficiency": 0.59503945554925,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.987631242128949,
+        "cache_adjusted_speedup": 1.0370128042353965,
+        "projected_improvement_percent": 3.7012804235396546,
+        "memory_efficiency": 0.59503945554925,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_4": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8178679524738267,
+        "cache_adjusted_speedup": 0.8996547477212095,
+        "projected_improvement_percent": -10.034525227879055,
+        "memory_efficiency": 0.59506373643325,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8178223791023289,
+        "cache_adjusted_speedup": 0.8587134980574453,
+        "projected_improvement_percent": -14.128650194255465,
+        "memory_efficiency": 0.59506373643325,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8179590992168221,
+        "cache_adjusted_speedup": 0.9815509190601864,
+        "projected_improvement_percent": -1.8449080939813567,
+        "memory_efficiency": 0.59506373643325,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9877120136029311,
+        "cache_adjusted_speedup": 1.0370976142830777,
+        "projected_improvement_percent": 3.7097614283077673,
+        "memory_efficiency": 0.59506373643325,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_5": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8180431907657819,
+        "cache_adjusted_speedup": 0.8998475098423602,
+        "projected_improvement_percent": -10.015249015763983,
+        "memory_efficiency": 0.5950940881232499,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8179759134187672,
+        "cache_adjusted_speedup": 0.8588747090897055,
+        "projected_improvement_percent": -14.112529091029447,
+        "memory_efficiency": 0.5950940881232499,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8181777454598115,
+        "cache_adjusted_speedup": 0.9818132945517737,
+        "projected_improvement_percent": -1.8186705448226315,
+        "memory_efficiency": 0.5950940881232499,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9878129855388258,
+        "cache_adjusted_speedup": 1.0372036348157672,
+        "projected_improvement_percent": 3.720363481576716,
+        "memory_efficiency": 0.5950940881232499,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_8": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8187793524341759,
+        "cache_adjusted_speedup": 0.9006572876775936,
+        "projected_improvement_percent": -9.934271232240643,
+        "memory_efficiency": 0.5952215723192499,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8186209016917536,
+        "cache_adjusted_speedup": 0.8595519467763413,
+        "projected_improvement_percent": -14.044805322365871,
+        "memory_efficiency": 0.5952215723192499,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8190962539190206,
+        "cache_adjusted_speedup": 0.9829155047028247,
+        "projected_improvement_percent": -1.7084495297175262,
+        "memory_efficiency": 0.5952215723192499,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9882371598093903,
+        "cache_adjusted_speedup": 1.0376490177998599,
+        "projected_improvement_percent": 3.764901779985985,
+        "memory_efficiency": 0.5952215723192499,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_10": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8194456273737672,
+        "cache_adjusted_speedup": 0.9013901901111441,
+        "projected_improvement_percent": -9.860980988885593,
+        "memory_efficiency": 0.5953369250432498,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8192046631719268,
+        "cache_adjusted_speedup": 0.8601648963305232,
+        "projected_improvement_percent": -13.983510366947682,
+        "memory_efficiency": 0.5953369250432498,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8199275557774481,
+        "cache_adjusted_speedup": 0.9839130669329377,
+        "projected_improvement_percent": -1.6086933067062326,
+        "memory_efficiency": 0.5953369250432498,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9886210647968441,
+        "cache_adjusted_speedup": 1.0380521180366864,
+        "projected_improvement_percent": 3.80521180366864,
+        "memory_efficiency": 0.5953369250432498,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_16": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8222884496825335,
+        "cache_adjusted_speedup": 0.9045172946507869,
+        "projected_improvement_percent": -9.548270534921311,
+        "memory_efficiency": 0.59582879721925,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.821695469792354,
+        "cache_adjusted_speedup": 0.8627802432819717,
+        "projected_improvement_percent": -13.721975671802833,
+        "memory_efficiency": 0.59582879721925,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8234744094628926,
+        "cache_adjusted_speedup": 0.9881692913554712,
+        "projected_improvement_percent": -1.1830708644528842,
+        "memory_efficiency": 0.59582879721925,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9902590798053262,
+        "cache_adjusted_speedup": 1.0397720337955927,
+        "projected_improvement_percent": 3.9772033795592687,
+        "memory_efficiency": 0.59582879721925,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    },
+    "N_32": {
+      "interactive_gui": {
+        "weighted_speedup": 0.8361010095998175,
+        "cache_adjusted_speedup": 0.9197111105597993,
+        "projected_improvement_percent": -8.028888944020075,
+        "memory_efficiency": 0.59821162605925,
+        "recommendation": "Marginal benefit - 0.9x improvement for interactive_gui"
+      },
+      "batch_processing": {
+        "weighted_speedup": 0.8337987714998991,
+        "cache_adjusted_speedup": 0.8754887100748941,
+        "projected_improvement_percent": -12.451128992510585,
+        "memory_efficiency": 0.59821162605925,
+        "recommendation": "Marginal benefit - 0.9x improvement for batch_processing"
+      },
+      "real_time_search": {
+        "weighted_speedup": 0.8407054857996547,
+        "cache_adjusted_speedup": 1.0088465829595856,
+        "projected_improvement_percent": 0.8846582959585625,
+        "memory_efficiency": 0.59821162605925,
+        "recommendation": "Marginal benefit - 1.0x improvement for real_time_search"
+      },
+      "dynamic_updates": {
+        "weighted_speedup": 0.9982176005721073,
+        "cache_adjusted_speedup": 1.0481284806007127,
+        "projected_improvement_percent": 4.812848060071273,
+        "memory_efficiency": 0.59821162605925,
+        "recommendation": "Marginal benefit - 1.0x improvement for dynamic_updates"
+      }
+    }
+  },
+  "summary": {
+    "best_overall_n_value": 3,
+    "memory_champion": "hybrid_array",
+    "performance_champion": "hybrid_array",
+    "cache_efficiency_average": 0.5956021807382499,
+    "projected_speedup_range": "1.2x - 4.0x depending on workload"
+  }
+}

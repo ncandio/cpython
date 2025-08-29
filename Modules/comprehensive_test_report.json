@@ -1,0 +1,50 @@
+{
+  "timestamp": 1754473419.2209954,
+  "overall_success_rate": 0.0,
+  "total_test_suites": 3,
+  "passed_suites": 0,
+  "failed_suites": 3,
+  "total_execution_time": 0,
+  "production_ready": false,
+  "api_coverage": {
+    "insert": false,
+    "query": false,
+    "detect_collisions": false,
+    "get_all_points": false,
+    "contains": false,
+    "size": false,
+    "empty": false,
+    "depth": false,
+    "boundary": false,
+    "subdivisions": false
+  },
+  "test_results": [
+    {
+      "test_file": "test_quadtree_simple.py",
+      "description": "Basic Functionality Tests",
+      "success": false,
+      "execution_time": 0,
+      "stdout": "",
+      "stderr": "Test file not found",
+      "return_code": -3
+    },
+    {
+      "test_file": "test_quadtree_production.py",
+      "description": "Production Readiness Tests",
+      "success": false,
+      "execution_time": 0,
+      "stdout": "",
+      "stderr": "Test file not found",
+      "return_code": -3
+    },
+    {
+      "test_file": "test_quadtree_memory_management.py",
+      "description": "Smart Pointer Memory Management Tests",
+      "success": false,
+      "execution_time": 0,
+      "stdout": "",
+      "stderr": "Test file not found",
+      "return_code": -3
+    }
+  ]
+}

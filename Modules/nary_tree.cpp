@@ -12,8 +12,24 @@
 #include <cmath>
 #include <cstring>
 
+// Enhanced N-ary Tree with array-based storage, locality optimization, and succinct encoding
+
 template <typename T>
 class NaryTree {
+public:
+    // Array-based node for better locality
+    struct ArrayNode {
+        T data;
+        int parent_index;
+        int first_child_index;
+        int child_count;
+        bool is_valid;
+        
+        ArrayNode() : parent_index(-1), first_child_index(-1), child_count(0), is_valid(false) {}
+        ArrayNode(const T& d, int parent = -1) 
+            : data(d), parent_index(parent), first_child_index(-1), child_count(0), is_valid(true) {}
+    };
+
 public:
     class Node {
         friend class NaryTree<T>;  // Allow NaryTree to access private members
@@ -199,10 +215,16 @@ private:
 
 public:
     // Constructors
-    explicit NaryTree(T root_data) 
-        : root_(std::make_unique<Node>(std::move(root_data))), size_(1) {}
+    explicit NaryTree(T root_data, bool enable_array = false) 
+        : root_(std::make_unique<Node>(std::move(root_data))), size_(1),
+          array_root_index_(-1), operations_since_balance_(0), use_array_storage_(enable_array) {
+        if (enable_array) {
+            enable_array_storage();
+        }
+    }
     
-    NaryTree() : root_(nullptr), size_(0) {}
+    NaryTree() : root_(nullptr), size_(0), array_root_index_(-1), 
+                 operations_since_balance_(0), use_array_storage_(false) {}
     
     // Move semantics
     NaryTree(NaryTree&&) = default;
@@ -426,6 +448,11 @@ public:
             size_t metadata_bytes = sizeof(size_t);
             return bit_bytes + data_bytes + metadata_bytes;
         }
+        
+        double compression_ratio() const {
+            size_t traditional_size = node_count * (sizeof(void*) * 2 + sizeof(T) + 16);
+            return traditional_size > 0 ? (double)memory_usage() / traditional_size : 1.0;
+        }
     };
     
     // Convert N-ary tree to succinct representation using direct preorder encoding
@@ -472,6 +499,144 @@ public:
         tree.size_ = encoding.node_count;
         
         return tree;
+    }
+
+    // Enhanced array-based storage for locality
+private:
+    std::vector<ArrayNode> array_nodes_;
+    int array_root_index_;
+    int operations_since_balance_;
+    bool use_array_storage_;
+    static const int LAZY_BALANCE_THRESHOLD = 100;
+
+public:
+    // Enable array-based storage for better locality
+    void enable_array_storage() {
+        if (!use_array_storage_) {
+            convert_to_array_storage();
+            use_array_storage_ = true;
+        }
+    }
+    
+    // Lazy rebalancing for locality optimization
+    void rebalance_for_locality() {
+        if (!use_array_storage_ || array_nodes_.empty()) return;
+        
+        std::vector<ArrayNode> new_nodes;
+        std::vector<int> old_to_new(array_nodes_.size(), -1);
+        std::queue<int> queue;
+        
+        // Breadth-first reordering for better cache locality
+        queue.push(array_root_index_);
+        old_to_new[array_root_index_] = 0;
+        new_nodes.push_back(array_nodes_[array_root_index_]);
+        new_nodes[0].parent_index = -1;
+        new_nodes[0].first_child_index = -1;
+        new_nodes[0].child_count = 0;
+        
+        int new_index = 1;
+        
+        while (!queue.empty()) {
+            int current_old = queue.front();
+            queue.pop();
+            int current_new = old_to_new[current_old];
+            
+            // Find all children - preserves N-ary structure
+            std::vector<int> children;
+            for (int i = 0; i < array_nodes_.size(); ++i) {
+                if (array_nodes_[i].is_valid && array_nodes_[i].parent_index == current_old) {
+                    children.push_back(i);
+                }
+            }
+            
+            if (!children.empty()) {
+                new_nodes[current_new].first_child_index = new_index;
+                new_nodes[current_new].child_count = children.size();
+                
+                // Add all N children consecutively for locality
+                for (int child_old : children) {
+                    old_to_new[child_old] = new_index;
+                    new_nodes.push_back(array_nodes_[child_old]);
+                    new_nodes[new_index].parent_index = current_new;
+                    queue.push(child_old);
+                    new_index++;
+                }
+            }
+        }
+        
+        array_nodes_ = std::move(new_nodes);
+        array_root_index_ = 0;
+        operations_since_balance_ = 0;
+    }
+    
+    // Locality analysis
+    double calculate_locality_score() const {
+        if (!use_array_storage_ || array_nodes_.empty()) return 0.5;
+        
+        double score = 0.0;
+        int comparisons = 0;
+        
+        for (int i = 0; i < array_nodes_.size(); ++i) {
+            if (array_nodes_[i].is_valid && array_nodes_[i].child_count > 0) {
+                int first_child = array_nodes_[i].first_child_index;
+                
+                // Better score when children are close to parent
+                double distance = std::abs(first_child - i);
+                score += 1.0 / (1.0 + distance / 10.0);
+                comparisons++;
+                
+                // Better score when children are consecutive
+                for (int j = 1; j < array_nodes_[i].child_count; ++j) {
+                    if (first_child + j < array_nodes_.size() && array_nodes_[first_child + j].is_valid) {
+                        score += 1.0; // Consecutive children
+                    } else {
+                        score += 0.5; // Gap in children
+                    }
+                    comparisons++;
+                }
+            }
+        }
+        
+        return comparisons > 0 ? score / comparisons : 1.0;
+    }
+
+private:
+    void convert_to_array_storage() {
+        if (!root_) return;
+        
+        array_nodes_.clear();
+        array_root_index_ = 0;
+        operations_since_balance_ = 0;
+        
+        // Convert pointer-based tree to array-based
+        std::queue<std::pair<const Node*, int>> queue;
+        queue.push({root_.get(), -1});
+        
+        while (!queue.empty()) {
+            auto [node, parent_idx] = queue.front();
+            queue.pop();
+            
+            int current_idx = array_nodes_.size();
+            array_nodes_.push_back(ArrayNode(node->data(), parent_idx));
+            
+            if (parent_idx == -1) {
+                array_root_index_ = current_idx;
+            } else {
+                // Update parent's child info
+                if (array_nodes_[parent_idx].child_count == 0) {
+                    array_nodes_[parent_idx].first_child_index = current_idx;
+                }
+                array_nodes_[parent_idx].child_count++;
+            }
+            
+            // Add children to queue
+            for (size_t i = 0; i < node->child_count(); ++i) {
+                queue.push({&node->child(i), current_idx});
+            }
+        }
+        
+        // Immediately rebalance for optimal locality
+        rebalance_for_locality();
     }
     
 private:

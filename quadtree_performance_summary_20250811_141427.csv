@@ -1,0 +1,23 @@
+Test Type,Configuration,Performance Metric,Value,Unit
+insertion,"{'size': 1000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Points per Second,60320,pts/sec
+insertion,"{'size': 1000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Memory Used,0.79,MB
+insertion,"{'size': 5000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Points per Second,69728,pts/sec
+insertion,"{'size': 5000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Memory Used,3.47,MB
+insertion,"{'size': 10000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Points per Second,70689,pts/sec
+insertion,"{'size': 10000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Memory Used,4.13,MB
+insertion,"{'size': 25000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Points per Second,75068,pts/sec
+insertion,"{'size': 25000, 'distribution': 'uniform', 'bounds': (0, 1000)}",Memory Used,11.70,MB
+insertion,"{'size': 10000, 'distribution': 'clustered', 'bounds': (0, 1000)}",Points per Second,36944,pts/sec
+insertion,"{'size': 10000, 'distribution': 'clustered', 'bounds': (0, 1000)}",Memory Used,0.00,MB
+insertion,"{'size': 10000, 'distribution': 'sparse', 'bounds': (0, 10000)}",Points per Second,59551,pts/sec
+insertion,"{'size': 10000, 'distribution': 'sparse', 'bounds': (0, 10000)}",Memory Used,0.00,MB
+query,tiny,Queries per Second,59872,q/sec
+query,tiny,Mean Query Time,11.5,μs
+query,small,Queries per Second,6566,q/sec
+query,small,Mean Query Time,145.9,μs
+query,medium,Queries per Second,275,q/sec
+query,medium,Mean Query Time,3621.7,μs
+query,large,Queries per Second,38,q/sec
+query,large,Mean Query Time,26372.8,μs
+query,huge,Queries per Second,14,q/sec
+query,huge,Mean Query Time,70496.2,μs

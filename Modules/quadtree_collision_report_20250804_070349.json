@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-08-04T07:03:49.160053",
+  "scenario": "random_10",
+  "collision_radius": 25.0,
+  "total_points": 7,
+  "points": [
+    {
+      "id": 0,
+      "x": 131.0,
+      "y": 212.0,
+      "data": "random_10_3"
+    },
+    {
+      "id": 1,
+      "x": 274.0,
+      "y": 129.0,
+      "data": "random_10_7"
+    },
+    {
+      "id": 2,
+      "x": 473.0,
+      "y": 141.0,
+      "data": "random_10_4"
+    },
+    {
+      "id": 3,
+      "x": 316.0,
+      "y": 383.0,
+      "data": "random_10_9"
+    },
+    {
+      "id": 4,
+      "x": 321.0,
+      "y": 385.0,
+      "data": "point_321_385"
+    },
+    {
+      "id": 5,
+      "x": 324.0,
+      "y": 403.0,
+      "data": "point_324_403"
+    },
+    {
+      "id": 6,
+      "x": 137.0,
+      "y": 430.0,
+      "data": "random_10_8"
+    }
+  ],
+  "collisions": [
+    {
+      "point1_id": 3,
+      "point1_coords": [
+        316.0,
+        383.0
+      ],
+      "point1_data": "random_10_9",
+      "point2_id": 4,
+      "point2_coords": [
+        321.0,
+        385.0
+      ],
+      "point2_data": "point_321_385",
+      "distance": 5.39,
+      "collision_region": {
+        "center_x": 318.5,
+        "center_y": 384.0,
+        "radius": 7.69
+      }
+    },
+    {
+      "point1_id": 3,
+      "point1_coords": [
+        316.0,
+        383.0
+      ],
+      "point1_data": "random_10_9",
+      "point2_id": 5,
+      "point2_coords": [
+        324.0,
+        403.0
+      ],
+      "point2_data": "point_324_403",
+      "distance": 21.54,
+      "collision_region": {
+        "center_x": 320.0,
+        "center_y": 393.0,
+        "radius": 15.77
+      }
+    },
+    {
+      "point1_id": 4,
+      "point1_coords": [
+        321.0,
+        385.0
+      ],
+      "point1_data": "point_321_385",
+      "point2_id": 5,
+      "point2_coords": [
+        324.0,
+        403.0
+      ],
+      "point2_data": "point_324_403",
+      "distance": 18.25,
+      "collision_region": {
+        "center_x": 322.5,
+        "center_y": 394.0,
+        "radius": 14.12
+      }
+    }
+  ],
+  "collision_summary": {
+    "total_collisions": 3,
+    "collision_pairs": 3
+  }
+}

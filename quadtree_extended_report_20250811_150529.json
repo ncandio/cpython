@@ -1,0 +1,944 @@
+{
+  "test_info": {
+    "timestamp": "2025-08-11T15:05:29.611106",
+    "duration_seconds": 70.97359538078308,
+    "python_version": "3.15.0a0 (heads/feature/quadtree-cpp17-dirty:1b19e9f1278, Aug  6 2025, 08:18:42) [GCC 12.2.0]",
+    "psutil_available": true
+  },
+  "performance_data": [
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 1000,
+          "distribution": "uniform",
+          "bounds": [
+            0,
+            1000
+          ]
+        },
+        "total_time_ms": 13.251781463623047,
+        "points_per_second": 75461.55230110468,
+        "memory_used_mb": 0.79296875,
+        "tree_size": 1000,
+        "tree_depth": 5,
+        "tree_subdivisions": 115,
+        "insertion_time_stats": {
+          "min_us": 4.19999923906289,
+          "max_us": 94.600000011269,
+          "mean_us": 4.80999999854248,
+          "median_us": 4.499999704421498,
+          "stddev_us": 3.205759963364895
+        }
+      }
+    },
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 5000,
+          "distribution": "uniform",
+          "bounds": [
+            0,
+            1000
+          ]
+        },
+        "total_time_ms": 67.80695915222168,
+        "points_per_second": 73738.74396542934,
+        "memory_used_mb": 3.46875,
+        "tree_size": 5000,
+        "tree_depth": 6,
+        "tree_subdivisions": 621,
+        "insertion_time_stats": {
+          "min_us": 4.799998350790702,
+          "max_us": 756.2999999208841,
+          "mean_us": 6.3834589873295045,
+          "median_us": 5.100000635138713,
+          "stddev_us": 11.0449732826765
+        }
+      }
+    },
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 10000,
+          "distribution": "uniform",
+          "bounds": [
+            0,
+            1000
+          ]
+        },
+        "total_time_ms": 125.95081329345703,
+        "points_per_second": 79396.07326473283,
+        "memory_used_mb": 4.12109375,
+        "tree_size": 10000,
+        "tree_depth": 7,
+        "tree_subdivisions": 1346,
+        "insertion_time_stats": {
+          "min_us": 4.699999408330768,
+          "max_us": 305.3999989788281,
+          "mean_us": 5.771048794485978,
+          "median_us": 5.199999577598646,
+          "stddev_us": 4.919583381484016
+        }
+      }
+    },
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 25000,
+          "distribution": "uniform",
+          "bounds": [
+            0,
+            1000
+          ]
+        },
+        "total_time_ms": 308.5160255432129,
+        "points_per_second": 81033.06775063562,
+        "memory_used_mb": 11.703125,
+        "tree_size": 25000,
+        "tree_depth": 8,
+        "tree_subdivisions": 3465,
+        "insertion_time_stats": {
+          "min_us": 4.699999408330768,
+          "max_us": 179.50000074051786,
+          "mean_us": 5.666935281187762,
+          "median_us": 5.20000139658805,
+          "stddev_us": 3.0991154657563036
+        }
+      }
+    },
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 10000,
+          "distribution": "clustered",
+          "bounds": [
+            0,
+            1000
+          ]
+        },
+        "total_time_ms": 238.7850284576416,
+        "points_per_second": 41878.67248039763,
+        "memory_used_mb": 0.0,
+        "tree_size": 10000,
+        "tree_depth": 9,
+        "tree_subdivisions": 1324,
+        "insertion_time_stats": {
+          "min_us": 4.799998350790702,
+          "max_us": 1173.7999993783887,
+          "mean_us": 6.038459205228719,
+          "median_us": 5.399999281507917,
+          "stddev_us": 13.688427783726416
+        }
+      }
+    },
+    {
+      "test_type": "insertion",
+      "stats": {
+        "config": {
+          "size": 10000,
+          "distribution": "sparse",
+          "bounds": [
+            0,
+            10000
+          ]
+        },
+        "total_time_ms": 172.19805717468262,
+        "points_per_second": 58072.66448921497,
+        "memory_used_mb": 0.0,
+        "tree_size": 10000,
+        "tree_depth": 7,
+        "tree_subdivisions": 1332,
+        "insertion_time_stats": {
+          "min_us": 4.799998350790702,
+          "max_us": 1650.0990004715277,
+          "mean_us": 6.578409094981907,
+          "median_us": 5.600000804406591,
+          "stddev_us": 18.466078098495277
+        }
+      }
+    },
+    {
+      "test_type": "query",
+      "stats": {
+        "config": {
+          "name": "tiny",
+          "size": [
+            10,
+            10
+          ],
+          "count": 1000
+        },
+        "total_time_ms": 16.425609588623047,
+        "queries_per_second": 60880.541121142625,
+        "query_time_stats": {
+          "min_us": 4.399998942972161,
+          "max_us": 50.999999075429514,
+          "mean_us": 11.267699012023513,
+          "median_us": 10.349999683967326,
+          "stddev_us": 5.095481610029907
+        },
+        "result_stats": {
+          "min_results": 0,
+          "max_results": 8,
+          "mean_results": 2.016,
+          "median_results": 2.0
+        }
+      }
+    },
+    {
+      "test_type": "query",
+      "stats": {
+        "config": {
+          "name": "small",
+          "size": [
+            50,
+            50
+          ],
+          "count": 1000
+        },
+        "total_time_ms": 142.41933822631836,
+        "queries_per_second": 7021.518372813259,
+        "query_time_stats": {
+          "min_us": 73.10000000870787,
+          "max_us": 1729.4990011578193,
+          "mean_us": 135.9081769878685,
+          "median_us": 129.40000033268007,
+          "stddev_us": 59.511677585382955
+        },
+        "result_stats": {
+          "min_results": 28,
+          "max_results": 71,
+          "mean_results": 50.406,
+          "median_results": 51.0
+        }
+      }
+    },
+    {
+      "test_type": "query",
+      "stats": {
+        "config": {
+          "name": "medium",
+          "size": [
+            200,
+            200
+          ],
+          "count": 500
+        },
+        "total_time_ms": 1740.5362129211426,
+        "queries_per_second": 287.26779499798505,
+        "query_time_stats": {
+          "min_us": 2927.898998677847,
+          "max_us": 5963.998999504838,
+          "mean_us": 3466.3102079903183,
+          "median_us": 3365.5990000625025,
+          "stddev_us": 391.7694919415463
+        },
+        "result_stats": {
+          "min_results": 732,
+          "max_results": 866,
+          "mean_results": 800.192,
+          "median_results": 800.0
+        }
+      }
+    },
+    {
+      "test_type": "query",
+      "stats": {
+        "config": {
+          "name": "large",
+          "size": [
+            500,
+            500
+          ],
+          "count": 200
+        },
+        "total_time_ms": 5073.721647262573,
+        "queries_per_second": 39.41879628101121,
+        "query_time_stats": {
+          "min_us": 22877.696999785258,
+          "max_us": 43483.59200048435,
+          "mean_us": 25342.00659997623,
+          "median_us": 25007.094999637047,
+          "stddev_us": 1904.5162802841521
+        },
+        "result_stats": {
+          "min_results": 4930,
+          "max_results": 5070,
+          "mean_results": 4996.665,
+          "median_results": 4997.0
+        }
+      }
+    },
+    {
+      "test_type": "query",
+      "stats": {
+        "config": {
+          "name": "huge",
+          "size": [
+            800,
+            800
+          ],
+          "count": 100
+        },
+        "total_time_ms": 6664.685487747192,
+        "queries_per_second": 15.004458977673703,
+        "query_time_stats": {
+          "min_us": 63596.698999390355,
+          "max_us": 77816.29800047085,
+          "mean_us": 66620.86230007844,
+          "median_us": 65865.19899974519,
+          "stddev_us": 2428.31763698553
+        },
+        "result_stats": {
+          "min_results": 12698,
+          "max_results": 12853,
+          "mean_results": 12776.14,
+          "median_results": 12774.5
+        }
+      }
+    },
+    {
+      "test_type": "collision",
+      "stats": {
+        "config": {
+          "radius": 5.0,
+          "expected_range": [
+            50,
+            500
+          ]
+        },
+        "detection_time_ms": 147.66679599961208,
+        "num_collisions": 10657,
+        "collisions_per_second": 72169.2370167495,
+        "validity_rate_percent": 100.0,
+        "memory_delta_mb": 0.0
+      }
+    },
+    {
+      "test_type": "collision",
+      "stats": {
+        "config": {
+          "radius": 10.0,
+          "expected_range": [
+            200,
+            1000
+          ]
+        },
+        "detection_time_ms": 588.0987869986711,
+        "num_collisions": 42254,
+        "collisions_per_second": 71848.47330775991,
+        "validity_rate_percent": 100.0,
+        "memory_delta_mb": 46.078125
+      }
+    },
+    {
+      "test_type": "collision",
+      "stats": {
+        "config": {
+          "radius": 25.0,
+          "expected_range": [
+            1000,
+            5000
+          ]
+        },
+        "detection_time_ms": 3383.0571819999022,
+        "num_collisions": 247134,
+        "collisions_per_second": 73050.49448023405,
+        "validity_rate_percent": 100.0,
+        "memory_delta_mb": 296.9765625
+      }
+    },
+    {
+      "test_type": "collision",
+      "stats": {
+        "config": {
+          "radius": 50.0,
+          "expected_range": [
+            5000,
+            15000
+          ]
+        },
+        "detection_time_ms": 10761.42979299948,
+        "num_collisions": 769507,
+        "collisions_per_second": 71506.0186984242,
+        "validity_rate_percent": 100.0,
+        "memory_delta_mb": 768.23046875
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "no_data",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af169a60>"
+        },
+        "insertion_rate": 463048.6698509991,
+        "query_rate": 8896.36895590188,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 49.414,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "small_string",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af347110>"
+        },
+        "insertion_rate": 331912.72475703695,
+        "query_rate": 8631.075964459938,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.054,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "large_string",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af373740>"
+        },
+        "insertion_rate": 297769.66945679695,
+        "query_rate": 7281.856761659181,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.422,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "integer",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af373d70>"
+        },
+        "insertion_rate": 421663.3421114263,
+        "query_rate": 8803.901114208042,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.216,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "float",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af1a71c0>"
+        },
+        "insertion_rate": 361559.0164472855,
+        "query_rate": 8339.33696097498,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.156,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "list",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af1a5dd0>"
+        },
+        "insertion_rate": 251238.581081382,
+        "query_rate": 7675.256224788312,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.242,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "dict",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af1a52d0>"
+        },
+        "insertion_rate": 209188.37336888906,
+        "query_rate": 8469.479367296834,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 49.444,
+        "memory_per_point_kb": 0.0
+      }
+    },
+    {
+      "test_type": "datatype",
+      "stats": {
+        "config": {
+          "name": "complex_object",
+          "generator": "<function ExtendedTestBattery.test_data_type_performance.<locals>.<lambda> at 0x7f59af1a5220>"
+        },
+        "insertion_rate": 187705.2815439229,
+        "query_rate": 8369.362742577421,
+        "memory_used_mb": 0.0,
+        "avg_results_per_query": 50.06,
+        "memory_per_point_kb": 0.0
+      }
+    }
+  ],
+  "scalability_data": [
+    {
+      "dataset_size": 1000,
+      "insertion_time_s": 0.0045071000004099915,
+      "insertion_rate": 221872.15724280232,
+      "query_time_s": 0.0019177000012859935,
+      "query_rate": 52145.79962086919,
+      "collision_time_s": 0.006949300000997027,
+      "collision_count": 596,
+      "memory_used_mb": 0.0,
+      "memory_per_point_kb": 0.0,
+      "tree_depth": 5,
+      "tree_subdivisions": 117,
+      "space_efficiency": 8.547008547008547
+    },
+    {
+      "dataset_size": 2000,
+      "insertion_time_s": 0.007950799999889568,
+      "insertion_rate": 251547.01414043602,
+      "query_time_s": 0.0073292999986733776,
+      "query_rate": 27287.73553220642,
+      "collision_time_s": 0.040973500999825774,
+      "collision_count": 2407,
+      "memory_used_mb": 0.0,
+      "memory_per_point_kb": 0.0,
+      "tree_depth": 6,
+      "tree_subdivisions": 290,
+      "space_efficiency": 6.896551724137931
+    },
+    {
+      "dataset_size": 5000,
+      "insertion_time_s": 0.023309201000301982,
+      "insertion_rate": 214507.56720212,
+      "query_time_s": 0.043068300999948406,
+      "query_rate": 11609.466554081133,
+      "collision_time_s": 0.2313344070007588,
+      "collision_count": 15206,
+      "memory_used_mb": 0.76953125,
+      "memory_per_point_kb": 0.1576,
+      "tree_depth": 6,
+      "tree_subdivisions": 628,
+      "space_efficiency": 7.961783439490445
+    },
+    {
+      "dataset_size": 10000,
+      "insertion_time_s": 0.040978401999382186,
+      "insertion_rate": 244030.98979190955,
+      "query_time_s": 0.2283672059984383,
+      "query_rate": 4378.912443351602,
+      "collision_time_s": 0.9060398299989174,
+      "collision_count": 61938,
+      "memory_used_mb": 26.0390625,
+      "memory_per_point_kb": 2.6664,
+      "tree_depth": 7,
+      "tree_subdivisions": 1339,
+      "space_efficiency": 7.468259895444361
+    },
+    {
+      "dataset_size": 20000,
+      "insertion_time_s": 0.08034180299910076,
+      "insertion_rate": 248936.4098565706,
+      "query_time_s": 0.49309991800146236,
+      "query_rate": 2027.9865469315173,
+      "collision_time_s": 3.720428635000644,
+      "collision_count": 246878,
+      "memory_used_mb": 82.9296875,
+      "memory_per_point_kb": 4.246,
+      "tree_depth": 7,
+      "tree_subdivisions": 2547,
+      "space_efficiency": 7.852375343541421
+    },
+    {
+      "dataset_size": 50000,
+      "insertion_time_s": 0.2114753070000006,
+      "insertion_rate": 236434.22350014537,
+      "query_time_s": 1.569578956999976,
+      "query_rate": 637.113536429767,
+      "collision_time_s": 29.946159713999805,
+      "collision_count": 1542860,
+      "memory_used_mb": 1363.921875,
+      "memory_per_point_kb": 27.93312,
+      "tree_depth": 8,
+      "tree_subdivisions": 6073,
+      "space_efficiency": 8.233163181294254
+    }
+  ],
+  "memory_profiles": [
+    {
+      "config": {
+        "name": "small_objects",
+        "data_size": 10,
+        "count": 10000
+      },
+      "total_memory_mb": 0.0,
+      "memory_per_object_kb": 0.0,
+      "overhead_ratio": 0.0,
+      "tree_metrics": {
+        "size": 10000,
+        "depth": 7,
+        "subdivisions": 1336
+      }
+    },
+    {
+      "config": {
+        "name": "medium_objects",
+        "data_size": 100,
+        "count": 5000
+      },
+      "total_memory_mb": 0.0,
+      "memory_per_object_kb": 0.0,
+      "overhead_ratio": 0.0,
+      "tree_metrics": {
+        "size": 5000,
+        "depth": 6,
+        "subdivisions": 638
+      }
+    },
+    {
+      "config": {
+        "name": "large_objects",
+        "data_size": 1000,
+        "count": 1000
+      },
+      "total_memory_mb": 0.0,
+      "memory_per_object_kb": 0.0,
+      "overhead_ratio": 0.0,
+      "tree_metrics": {
+        "size": 1000,
+        "depth": 5,
+        "subdivisions": 121
+      }
+    },
+    {
+      "config": {
+        "name": "variable_objects",
+        "data_size": "variable",
+        "count": 5000
+      },
+      "total_memory_mb": 0.0,
+      "memory_per_object_kb": 0.0,
+      "overhead_ratio": 0,
+      "tree_metrics": {
+        "size": 5000,
+        "depth": 6,
+        "subdivisions": 646
+      }
+    }
+  ],
+  "detailed_metrics": {
+    "structure_uniform": {
+      "config": {
+        "name": "uniform",
+        "generator": "<function ExtendedTestBattery.test_tree_structure_metrics.<locals>.<lambda> at 0x7f59af1a7e20>"
+      },
+      "final_size": 10000,
+      "final_depth": 7,
+      "final_subdivisions": 1310,
+      "points_per_subdivision": 7.633587786259542,
+      "subdivision_progression": [
+        {
+          "points": 1000,
+          "depth": 5,
+          "subdivisions": 113,
+          "efficiency": 8.849557522123893
+        },
+        {
+          "points": 2000,
+          "depth": 5,
+          "subdivisions": 282,
+          "efficiency": 7.092198581560283
+        },
+        {
+          "points": 3000,
+          "depth": 6,
+          "subdivisions": 367,
+          "efficiency": 8.174386920980927
+        },
+        {
+          "points": 4000,
+          "depth": 6,
+          "subdivisions": 476,
+          "efficiency": 8.403361344537815
+        },
+        {
+          "points": 5000,
+          "depth": 6,
+          "subdivisions": 637,
+          "efficiency": 7.849293563579278
+        },
+        {
+          "points": 6000,
+          "depth": 7,
+          "subdivisions": 813,
+          "efficiency": 7.380073800738008
+        },
+        {
+          "points": 7000,
+          "depth": 7,
+          "subdivisions": 994,
+          "efficiency": 7.042253521126761
+        },
+        {
+          "points": 8000,
+          "depth": 7,
+          "subdivisions": 1140,
+          "efficiency": 7.017543859649122
+        },
+        {
+          "points": 9000,
+          "depth": 7,
+          "subdivisions": 1244,
+          "efficiency": 7.234726688102894
+        },
+        {
+          "points": 10000,
+          "depth": 7,
+          "subdivisions": 1310,
+          "efficiency": 7.633587786259542
+        }
+      ],
+      "structure_efficiency": {
+        "subdivision_utilization": 5.996795605401694,
+        "average_points_per_subdivision": 7.633587786259542,
+        "depth_efficiency": 0.6103515625
+      }
+    },
+    "structure_clustered": {
+      "config": {
+        "name": "clustered",
+        "generator": "<function ExtendedTestBattery.test_tree_structure_metrics.<locals>.<lambda> at 0x7f59af1a61f0>"
+      },
+      "final_size": 10000,
+      "final_depth": 9,
+      "final_subdivisions": 1307,
+      "points_per_subdivision": 7.651109410864575,
+      "subdivision_progression": [
+        {
+          "points": 1000,
+          "depth": 7,
+          "subdivisions": 130,
+          "efficiency": 7.6923076923076925
+        },
+        {
+          "points": 2000,
+          "depth": 7,
+          "subdivisions": 259,
+          "efficiency": 7.722007722007722
+        },
+        {
+          "points": 3000,
+          "depth": 8,
+          "subdivisions": 396,
+          "efficiency": 7.575757575757576
+        },
+        {
+          "points": 4000,
+          "depth": 8,
+          "subdivisions": 515,
+          "efficiency": 7.766990291262136
+        },
+        {
+          "points": 5000,
+          "depth": 8,
+          "subdivisions": 650,
+          "efficiency": 7.6923076923076925
+        },
+        {
+          "points": 6000,
+          "depth": 9,
+          "subdivisions": 785,
+          "efficiency": 7.643312101910828
+        },
+        {
+          "points": 7000,
+          "depth": 9,
+          "subdivisions": 921,
+          "efficiency": 7.60043431053203
+        },
+        {
+          "points": 8000,
+          "depth": 9,
+          "subdivisions": 1047,
+          "efficiency": 7.640878701050621
+        },
+        {
+          "points": 9000,
+          "depth": 9,
+          "subdivisions": 1178,
+          "efficiency": 7.6400679117147705
+        },
+        {
+          "points": 10000,
+          "depth": 9,
+          "subdivisions": 1307,
+          "efficiency": 7.651109410864575
+        }
+      ],
+      "structure_efficiency": {
+        "subdivision_utilization": 0.3739360560761033,
+        "average_points_per_subdivision": 7.651109410864575,
+        "depth_efficiency": 0.03814697265625
+      }
+    },
+    "structure_linear": {
+      "config": {
+        "name": "linear",
+        "generator": "<function ExtendedTestBattery.test_tree_structure_metrics.<locals>.<lambda> at 0x7f59af1a7060>"
+      },
+      "final_size": 10000,
+      "final_depth": 10,
+      "final_subdivisions": 990,
+      "points_per_subdivision": 10.1010101010101,
+      "subdivision_progression": [
+        {
+          "points": 1000,
+          "depth": 10,
+          "subdivisions": 102,
+          "efficiency": 9.803921568627452
+        },
+        {
+          "points": 2000,
+          "depth": 10,
+          "subdivisions": 201,
+          "efficiency": 9.950248756218905
+        },
+        {
+          "points": 3000,
+          "depth": 10,
+          "subdivisions": 301,
+          "efficiency": 9.966777408637874
+        },
+        {
+          "points": 4000,
+          "depth": 10,
+          "subdivisions": 400,
+          "efficiency": 10.0
+        },
+        {
+          "points": 5000,
+          "depth": 10,
+          "subdivisions": 495,
+          "efficiency": 10.1010101010101
+        },
+        {
+          "points": 6000,
+          "depth": 10,
+          "subdivisions": 597,
+          "efficiency": 10.050251256281408
+        },
+        {
+          "points": 7000,
+          "depth": 10,
+          "subdivisions": 696,
+          "efficiency": 10.057471264367816
+        },
+        {
+          "points": 8000,
+          "depth": 10,
+          "subdivisions": 796,
+          "efficiency": 10.050251256281408
+        },
+        {
+          "points": 9000,
+          "depth": 10,
+          "subdivisions": 895,
+          "efficiency": 10.05586592178771
+        },
+        {
+          "points": 10000,
+          "depth": 10,
+          "subdivisions": 990,
+          "efficiency": 10.1010101010101
+        }
+      ],
+      "structure_efficiency": {
+        "subdivision_utilization": 0.07081033487566349,
+        "average_points_per_subdivision": 10.1010101010101,
+        "depth_efficiency": 0.0095367431640625
+      }
+    },
+    "structure_circular": {
+      "config": {
+        "name": "circular",
+        "generator": "<function ExtendedTestBattery.test_tree_structure_metrics.<locals>.<lambda> at 0x7f59af1a7c10>"
+      },
+      "final_size": 10000,
+      "final_depth": 10,
+      "final_subdivisions": 1728,
+      "points_per_subdivision": 5.787037037037037,
+      "subdivision_progression": [
+        {
+          "points": 1000,
+          "depth": 10,
+          "subdivisions": 169,
+          "efficiency": 5.9171597633136095
+        },
+        {
+          "points": 2000,
+          "depth": 10,
+          "subdivisions": 348,
+          "efficiency": 5.747126436781609
+        },
+        {
+          "points": 3000,
+          "depth": 10,
+          "subdivisions": 516,
+          "efficiency": 5.813953488372093
+        },
+        {
+          "points": 4000,
+          "depth": 10,
+          "subdivisions": 691,
+          "efficiency": 5.788712011577424
+        },
+        {
+          "points": 5000,
+          "depth": 10,
+          "subdivisions": 864,
+          "efficiency": 5.787037037037037
+        },
+        {
+          "points": 6000,
+          "depth": 10,
+          "subdivisions": 1033,
+          "efficiency": 5.808325266214908
+        },
+        {
+          "points": 7000,
+          "depth": 10,
+          "subdivisions": 1212,
+          "efficiency": 5.775577557755776
+        },
+        {
+          "points": 8000,
+          "depth": 10,
+          "subdivisions": 1380,
+          "efficiency": 5.797101449275362
+        },
+        {
+          "points": 9000,
+          "depth": 10,
+          "subdivisions": 1555,
+          "efficiency": 5.787781350482315
+        },
+        {
+          "points": 10000,
+          "depth": 10,
+          "subdivisions": 1728,
+          "efficiency": 5.787037037037037
+        }
+      ],
+      "structure_efficiency": {
+        "subdivision_utilization": 0.12359622087388536,
+        "average_points_per_subdivision": 5.787037037037037,
+        "depth_efficiency": 0.0095367431640625
+      }
+    }
+  }
+}

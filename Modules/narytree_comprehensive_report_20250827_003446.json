@@ -1,0 +1,60 @@
+{
+  "test_suite": "N-ary Tree Comprehensive Test Suite",
+  "timestamp": "2025-08-27T00:34:46.987685",
+  "python_version": "3.15.0a0 (heads/feature/octrees-cpp17-dirty:1e52f7539f2, Aug 20 2025, 02:22:03) [GCC 12.2.0]",
+  "total_runtime": 0.6009137630462646,
+  "total_test_time": 0.5987718105316162,
+  "summary": {
+    "total_test_suites": 6,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 2,
+    "crashed": 0,
+    "success_rate": 100.0,
+    "overall_status": "PASSED"
+  },
+  "test_suite_results": {
+    "test_narytree_simple.py": {
+      "description": "Basic Functionality Tests",
+      "status": "PASSED",
+      "duration": 0.07206082344055176,
+      "return_code": 0,
+      "error": null
+    },
+    "test_narytree_api_complete.py": {
+      "description": "Complete API Coverage Tests",
+      "status": "PASSED",
+      "duration": 0.10891032218933105,
+      "return_code": 0,
+      "error": null
+    },
+    "test_narytree_memory_stress.py": {
+      "description": "Memory Management and Stress Tests",
+      "status": "PASSED",
+      "duration": 0.2702207565307617,
+      "return_code": 0,
+      "error": null
+    },
+    "test_narytree_production.py": {
+      "description": "Production Readiness Tests",
+      "status": "PASSED",
+      "duration": 0.14757990837097168,
+      "return_code": 0,
+      "error": null
+    },
+    "test_narytree_stress.py": {
+      "description": "Extended Stress Testing",
+      "status": "SKIPPED",
+      "duration": 0,
+      "return_code": null,
+      "error": "Optional test file not found"
+    },
+    "test_narytree_performance.py": {
+      "description": "Performance Benchmarking",
+      "status": "SKIPPED",
+      "duration": 0,
+      "return_code": null,
+      "error": "Optional test file not found"
+    }
+  }
+}

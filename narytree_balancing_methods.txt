@@ -1,0 +1,138 @@
+N-ary Tree Self-Balancing Methods
+==================================
+
+The following are the complete self-balancing methods extracted from your n-ary tree implementation:
+
+// 1. Data Collection Method - Level-order traversal for memory efficiency
+std::vector<T> collect_all_data() const {
+    std::vector<T> data;
+    if (!root_) return data;
+    
+    data.reserve(size_); // Memory optimization: pre-allocate
+    
+    std::queue<const Node*> queue;
+    queue.push(root_.get());
+    
+    while (!queue.empty()) {
+        const Node* current = queue.front();
+        queue.pop();
+        
+        data.push_back(current->data()); // Copy data
+        
+        for (size_t i = 0; i < current->child_count(); ++i) {
+            queue.push(&current->child(i));
+        }
+    }
+    
+    return data;
+}
+
+// 2. Balanced Tree Reconstruction - Recursive subtree building
+std::unique_ptr<Node> build_balanced_subtree(
+    const std::vector<T>& data, 
+    size_t start, 
+    size_t end, 
+    size_t max_children_per_node = 3) const {
+    
+    if (start >= end) return nullptr;
+    
+    // Create root of this subtree
+    auto node = std::make_unique<Node>(data[start]);
+    
+    if (end - start == 1) return node; // Leaf node
+    
+    // Calculate optimal distribution of remaining nodes
+    size_t remaining = end - start - 1;
+    size_t children_count = std::min(remaining, max_children_per_node);
+    
+    if (children_count == 0) return node;
+    
+    // Distribute remaining nodes among children as evenly as possible
+    size_t base_size = remaining / children_count;
+    size_t extra = remaining % children_count;
+    
+    size_t current_start = start + 1;
+    
+    for (size_t i = 0; i < children_count && current_start < end; ++i) {
+        size_t child_size = base_size + (i < extra ? 1 : 0);
+        size_t child_end = current_start + child_size;
+        
+        if (child_end > end) child_end = end;
+        
+        auto child = build_balanced_subtree(data, current_start, child_end, max_children_per_node);
+        if (child) {
+            child->parent_ = node.get();
+            node->children_.push_back(std::move(child));
+        }
+        
+        current_start = child_end;
+    }
+    
+    return node;
+}
+
+// 3. Main Self-Balancing Method
+void balance_tree(size_t max_children_per_node = 3) {
+    if (!root_ || size_ <= 1) return; // Nothing to balance
+    
+    // Collect all data (memory-efficient approach)
+    auto data = collect_all_data();
+    
+    // Rebuild tree with balanced structure
+    root_ = build_balanced_subtree(data, 0, data.size(), max_children_per_node);
+}
+
+// 4. Rebalancing Heuristic - Determines when rebalancing is needed
+bool needs_rebalancing() const {
+    if (!root_ || size_ <= 3) return false;
+    
+    auto stats = get_statistics();
+    
+    // Heuristic: rebalance if tree is too deep relative to optimal depth
+    size_t optimal_depth = static_cast<size_t>(std::log(size_) / std::log(3)) + 1;
+    
+    return stats.max_depth > optimal_depth * 2;
+}
+
+// 5. Automatic Rebalancing - Smart rebalancing with threshold checking
+void auto_balance_if_needed(size_t max_children_per_node = 3) {
+    if (needs_rebalancing()) {
+        balance_tree(max_children_per_node);
+    }
+}
+
+ALGORITHM EXPLANATION:
+======================
+
+1. **collect_all_data()**: 
+   - Uses level-order (breadth-first) traversal
+   - Pre-allocates memory for efficiency
+   - Preserves data while allowing tree restructuring
+
+2. **build_balanced_subtree()**:
+   - Recursively builds balanced subtrees
+   - Evenly distributes nodes among children
+   - Handles remainder nodes by giving extra to first few children
+   - Creates optimal height balanced tree
+
+3. **balance_tree()**:
+   - Main entry point for rebalancing
+   - Collects all data, then rebuilds from scratch
+   - O(n) time complexity
+
+4. **needs_rebalancing()**:
+   - Heuristic based on depth comparison
+   - Triggers when actual depth > 2 × optimal depth
+   - Uses log₃(n) as optimal depth reference
+
+5. **auto_balance_if_needed()**:
+   - Smart wrapper that only rebalances when necessary
+   - Prevents unnecessary rebalancing operations
+
+KEY FEATURES:
+=============
+- Memory-efficient (pre-allocation, single pass)
+- Configurable branching factor (max_children_per_node)
+- Optimal height balancing
+- Smart rebalancing triggers
+- O(log_N n) access time maintenance

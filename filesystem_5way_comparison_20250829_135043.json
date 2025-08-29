@@ -1,0 +1,950 @@
+{
+  "analysis_metadata": {
+    "timestamp": "20250829_135043",
+    "system": "Intel i7 16GB",
+    "approaches": [
+      "ext4",
+      "ZFS",
+      "Btrfs",
+      "N-ary Auto",
+      "N-ary Lazy"
+    ]
+  },
+  "results": [
+    {
+      "entries": 1000,
+      "data_size_gb": 0.1,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 0.03,
+            "total_memory_mb": 0.07,
+            "ram_percent": 0.0
+          },
+          "disk": {
+            "data_mb": 102.4,
+            "metadata_mb": 0.03,
+            "overhead_mb": 5.22,
+            "fragmentation_mb": 2.15,
+            "total_disk_mb": 109.8,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 0.02,
+            "total_memory_mb": 7208.98,
+            "ram_percent": 44.0
+          },
+          "disk": {
+            "data_mb": 102.4,
+            "metadata_mb": 0.02,
+            "overhead_mb": 20.48,
+            "fragmentation_mb": 18.44,
+            "total_disk_mb": 141.34,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 0.04,
+            "total_memory_mb": 0.05,
+            "ram_percent": 0.0
+          },
+          "disk": {
+            "data_mb": 102.4,
+            "metadata_mb": 0.04,
+            "overhead_mb": 20.49,
+            "fragmentation_mb": 29.45,
+            "total_disk_mb": 152.38,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 0.13,
+            "total_memory_mb": 0.16,
+            "ram_percent": 0.001
+          },
+          "disk": {
+            "data_mb": 102.4,
+            "metadata_mb": 0.13,
+            "overhead_mb": 25.63,
+            "fragmentation_mb": 10.25,
+            "total_disk_mb": 138.42,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 7,
+            "actual_depth": 7,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 210,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 0.1,
+            "total_memory_mb": 0.11,
+            "ram_percent": 0.001
+          },
+          "disk": {
+            "data_mb": 102.4,
+            "metadata_mb": 0.1,
+            "overhead_mb": 22.55,
+            "fragmentation_mb": 3.75,
+            "total_disk_mb": 128.8,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 7,
+            "actual_depth": 8.4,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 10,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 10000,
+      "data_size_gb": 1,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 0.26,
+            "total_memory_mb": 0.67,
+            "ram_percent": 0.004
+          },
+          "disk": {
+            "data_mb": 1024,
+            "metadata_mb": 0.26,
+            "overhead_mb": 52.22,
+            "fragmentation_mb": 21.53,
+            "total_disk_mb": 1098.01,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 0.24,
+            "total_memory_mb": 7209.2,
+            "ram_percent": 44.001
+          },
+          "disk": {
+            "data_mb": 1024,
+            "metadata_mb": 0.24,
+            "overhead_mb": 204.85,
+            "fragmentation_mb": 184.36,
+            "total_disk_mb": 1413.45,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 0.4,
+            "total_memory_mb": 0.46,
+            "ram_percent": 0.003
+          },
+          "disk": {
+            "data_mb": 1024,
+            "metadata_mb": 0.4,
+            "overhead_mb": 204.88,
+            "fragmentation_mb": 294.52,
+            "total_disk_mb": 1523.8,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 2,
+            "actual_depth": 2.2,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 1.3,
+            "total_memory_mb": 1.56,
+            "ram_percent": 0.009
+          },
+          "disk": {
+            "data_mb": 1024,
+            "metadata_mb": 1.3,
+            "overhead_mb": 256.32,
+            "fragmentation_mb": 102.53,
+            "total_disk_mb": 1384.15,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 9,
+            "actual_depth": 9,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 2100,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 1.0,
+            "total_memory_mb": 1.05,
+            "ram_percent": 0.006
+          },
+          "disk": {
+            "data_mb": 1024,
+            "metadata_mb": 1.0,
+            "overhead_mb": 225.5,
+            "fragmentation_mb": 37.52,
+            "total_disk_mb": 1288.02,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 9,
+            "actual_depth": 10.8,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 100,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 50000,
+      "data_size_gb": 5,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 1.29,
+            "total_memory_mb": 3.35,
+            "ram_percent": 0.02
+          },
+          "disk": {
+            "data_mb": 5120,
+            "metadata_mb": 1.29,
+            "overhead_mb": 261.12,
+            "fragmentation_mb": 107.65,
+            "total_disk_mb": 5490.06,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 1.19,
+            "total_memory_mb": 7210.15,
+            "ram_percent": 44.007
+          },
+          "disk": {
+            "data_mb": 5120,
+            "metadata_mb": 1.19,
+            "overhead_mb": 1024.24,
+            "fragmentation_mb": 921.81,
+            "total_disk_mb": 7067.25,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 2.0,
+            "total_memory_mb": 2.3,
+            "ram_percent": 0.014
+          },
+          "disk": {
+            "data_mb": 5120,
+            "metadata_mb": 2.0,
+            "overhead_mb": 1024.4,
+            "fragmentation_mb": 1472.58,
+            "total_disk_mb": 7618.98,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 6.48,
+            "total_memory_mb": 7.78,
+            "ram_percent": 0.047
+          },
+          "disk": {
+            "data_mb": 5120,
+            "metadata_mb": 6.48,
+            "overhead_mb": 1281.62,
+            "fragmentation_mb": 512.65,
+            "total_disk_mb": 6920.75,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 10,
+            "actual_depth": 10,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 10500,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 5.01,
+            "total_memory_mb": 5.26,
+            "ram_percent": 0.032
+          },
+          "disk": {
+            "data_mb": 5120,
+            "metadata_mb": 5.01,
+            "overhead_mb": 1127.5,
+            "fragmentation_mb": 187.58,
+            "total_disk_mb": 6440.08,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 10,
+            "actual_depth": 12.0,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 500,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 100000,
+      "data_size_gb": 10,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 2.57,
+            "total_memory_mb": 6.69,
+            "ram_percent": 0.041
+          },
+          "disk": {
+            "data_mb": 10240,
+            "metadata_mb": 2.57,
+            "overhead_mb": 522.24,
+            "fragmentation_mb": 215.3,
+            "total_disk_mb": 10980.11,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 2.38,
+            "total_memory_mb": 7211.34,
+            "ram_percent": 44.015
+          },
+          "disk": {
+            "data_mb": 10240,
+            "metadata_mb": 2.38,
+            "overhead_mb": 2048.48,
+            "fragmentation_mb": 1843.63,
+            "total_disk_mb": 14134.49,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 4.01,
+            "total_memory_mb": 4.61,
+            "ram_percent": 0.028
+          },
+          "disk": {
+            "data_mb": 10240,
+            "metadata_mb": 4.01,
+            "overhead_mb": 2048.8,
+            "fragmentation_mb": 2945.15,
+            "total_disk_mb": 15237.96,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 12.97,
+            "total_memory_mb": 15.56,
+            "ram_percent": 0.095
+          },
+          "disk": {
+            "data_mb": 10240,
+            "metadata_mb": 12.97,
+            "overhead_mb": 2563.24,
+            "fragmentation_mb": 1025.3,
+            "total_disk_mb": 13841.51,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 11,
+            "actual_depth": 11,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 21000,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 10.01,
+            "total_memory_mb": 10.51,
+            "ram_percent": 0.064
+          },
+          "disk": {
+            "data_mb": 10240,
+            "metadata_mb": 10.01,
+            "overhead_mb": 2255.0,
+            "fragmentation_mb": 375.15,
+            "total_disk_mb": 12880.17,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 11,
+            "actual_depth": 13.2,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 1000,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 500000,
+      "data_size_gb": 50,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 12.87,
+            "total_memory_mb": 33.47,
+            "ram_percent": 0.204
+          },
+          "disk": {
+            "data_mb": 51200,
+            "metadata_mb": 12.87,
+            "overhead_mb": 2611.2,
+            "fragmentation_mb": 1076.48,
+            "total_disk_mb": 54900.56,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 11.92,
+            "total_memory_mb": 7220.88,
+            "ram_percent": 44.073
+          },
+          "disk": {
+            "data_mb": 51200,
+            "metadata_mb": 11.92,
+            "overhead_mb": 10242.38,
+            "fragmentation_mb": 9218.15,
+            "total_disk_mb": 70672.45,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 20.03,
+            "total_memory_mb": 23.03,
+            "ram_percent": 0.141
+          },
+          "disk": {
+            "data_mb": 51200,
+            "metadata_mb": 20.03,
+            "overhead_mb": 10244.01,
+            "fragmentation_mb": 14725.76,
+            "total_disk_mb": 76189.79,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 64.85,
+            "total_memory_mb": 77.82,
+            "ram_percent": 0.475
+          },
+          "disk": {
+            "data_mb": 51200,
+            "metadata_mb": 64.85,
+            "overhead_mb": 12816.21,
+            "fragmentation_mb": 5126.48,
+            "total_disk_mb": 69207.55,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 12,
+            "actual_depth": 12,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 105000,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 50.07,
+            "total_memory_mb": 52.57,
+            "ram_percent": 0.321
+          },
+          "disk": {
+            "data_mb": 51200,
+            "metadata_mb": 50.07,
+            "overhead_mb": 11275.01,
+            "fragmentation_mb": 1875.75,
+            "total_disk_mb": 64400.84,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 12,
+            "actual_depth": 14.4,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 5000,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 1000000,
+      "data_size_gb": 100,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 25.75,
+            "total_memory_mb": 66.95,
+            "ram_percent": 0.409
+          },
+          "disk": {
+            "data_mb": 102400,
+            "metadata_mb": 25.75,
+            "overhead_mb": 5222.4,
+            "fragmentation_mb": 2152.96,
+            "total_disk_mb": 109801.11,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 23.84,
+            "total_memory_mb": 7232.8,
+            "ram_percent": 44.146
+          },
+          "disk": {
+            "data_mb": 102400,
+            "metadata_mb": 23.84,
+            "overhead_mb": 20484.77,
+            "fragmentation_mb": 18436.29,
+            "total_disk_mb": 141344.9,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 40.05,
+            "total_memory_mb": 46.06,
+            "ram_percent": 0.281
+          },
+          "disk": {
+            "data_mb": 102400,
+            "metadata_mb": 40.05,
+            "overhead_mb": 20488.01,
+            "fragmentation_mb": 29451.52,
+            "total_disk_mb": 152379.58,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 3,
+            "actual_depth": 3.3,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 129.7,
+            "total_memory_mb": 155.64,
+            "ram_percent": 0.95
+          },
+          "disk": {
+            "data_mb": 102400,
+            "metadata_mb": 129.7,
+            "overhead_mb": 25632.42,
+            "fragmentation_mb": 10252.97,
+            "total_disk_mb": 138415.09,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 13,
+            "actual_depth": 13,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 210000,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 100.14,
+            "total_memory_mb": 105.14,
+            "ram_percent": 0.642
+          },
+          "disk": {
+            "data_mb": 102400,
+            "metadata_mb": 100.14,
+            "overhead_mb": 22550.03,
+            "fragmentation_mb": 3751.5,
+            "total_disk_mb": 128801.67,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 13,
+            "actual_depth": 15.6,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 10000,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 5000000,
+      "data_size_gb": 500,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 128.75,
+            "total_memory_mb": 334.74,
+            "ram_percent": 2.043
+          },
+          "disk": {
+            "data_mb": 512000,
+            "metadata_mb": 128.75,
+            "overhead_mb": 26112.0,
+            "fragmentation_mb": 10764.81,
+            "total_disk_mb": 549005.56,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 119.21,
+            "total_memory_mb": 7328.17,
+            "ram_percent": 44.728
+          },
+          "disk": {
+            "data_mb": 512000,
+            "metadata_mb": 119.21,
+            "overhead_mb": 102423.84,
+            "fragmentation_mb": 92181.46,
+            "total_disk_mb": 706724.51,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 200.27,
+            "total_memory_mb": 230.31,
+            "ram_percent": 1.406
+          },
+          "disk": {
+            "data_mb": 512000,
+            "metadata_mb": 200.27,
+            "overhead_mb": 102440.05,
+            "fragmentation_mb": 147257.58,
+            "total_disk_mb": 761897.9,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 648.5,
+            "total_memory_mb": 778.2,
+            "ram_percent": 4.75
+          },
+          "disk": {
+            "data_mb": 512000,
+            "metadata_mb": 648.5,
+            "overhead_mb": 128162.12,
+            "fragmentation_mb": 51264.85,
+            "total_disk_mb": 692075.47,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 15,
+            "actual_depth": 15,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 1050000,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 500.68,
+            "total_memory_mb": 525.71,
+            "ram_percent": 3.209
+          },
+          "disk": {
+            "data_mb": 512000,
+            "metadata_mb": 500.68,
+            "overhead_mb": 112750.15,
+            "fragmentation_mb": 18757.52,
+            "total_disk_mb": 644008.35,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 15,
+            "actual_depth": 18.0,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 50000,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    },
+    {
+      "entries": 10000000,
+      "data_size_gb": 1000,
+      "filesystems": {
+        "ext4": {
+          "memory": {
+            "base_memory_mb": 257.49,
+            "total_memory_mb": 669.48,
+            "ram_percent": 4.086
+          },
+          "disk": {
+            "data_mb": 1024000,
+            "metadata_mb": 257.49,
+            "overhead_mb": 52224.0,
+            "fragmentation_mb": 21529.63,
+            "total_disk_mb": 1098011.12,
+            "efficiency_percent": 93.3
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "zfs": {
+          "memory": {
+            "base_memory_mb": 238.42,
+            "total_memory_mb": 7447.38,
+            "ram_percent": 45.455
+          },
+          "disk": {
+            "data_mb": 1024000,
+            "metadata_mb": 238.42,
+            "overhead_mb": 204847.68,
+            "fragmentation_mb": 184362.92,
+            "total_disk_mb": 1413449.02,
+            "efficiency_percent": 72.4
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "btrfs": {
+          "memory": {
+            "base_memory_mb": 400.54,
+            "total_memory_mb": 460.62,
+            "ram_percent": 2.811
+          },
+          "disk": {
+            "data_mb": 1024000,
+            "metadata_mb": 400.54,
+            "overhead_mb": 204880.11,
+            "fragmentation_mb": 294515.16,
+            "total_disk_mb": 1523795.81,
+            "efficiency_percent": 67.2
+          },
+          "performance": {
+            "optimal_depth": 4,
+            "actual_depth": 4.4,
+            "performance_guarantee": "O(log n) filesystem ops",
+            "rebalance_operations": 0,
+            "access_overhead": 1.1
+          }
+        },
+        "narytree_auto_fs": {
+          "memory": {
+            "base_memory_mb": 1297.0,
+            "total_memory_mb": 1556.4,
+            "ram_percent": 9.499
+          },
+          "disk": {
+            "data_mb": 1024000,
+            "metadata_mb": 1297.0,
+            "overhead_mb": 256324.25,
+            "fragmentation_mb": 102529.7,
+            "total_disk_mb": 1384150.95,
+            "efficiency_percent": 74.0
+          },
+          "performance": {
+            "optimal_depth": 15,
+            "actual_depth": 15,
+            "performance_guarantee": "O(log n) guaranteed",
+            "rebalance_operations": 2100000,
+            "access_overhead": 1.0
+          }
+        },
+        "narytree_lazy_fs": {
+          "memory": {
+            "base_memory_mb": 1001.36,
+            "total_memory_mb": 1051.43,
+            "ram_percent": 6.417
+          },
+          "disk": {
+            "data_mb": 1024000,
+            "metadata_mb": 1001.36,
+            "overhead_mb": 225500.3,
+            "fragmentation_mb": 37515.05,
+            "total_disk_mb": 1288016.71,
+            "efficiency_percent": 79.5
+          },
+          "performance": {
+            "optimal_depth": 15,
+            "actual_depth": 18.0,
+            "performance_guarantee": "O(log n) on access",
+            "rebalance_operations": 100000,
+            "access_overhead": 1.2
+          }
+        }
+      }
+    }
+  ],
+  "capacity_limits": {
+    "ext4": 509033161,
+    "zfs": 247390116,
+    "btrfs": 327235603,
+    "narytree_auto_fs": 84215045,
+    "narytree_lazy_fs": 124661182
+  }
+}

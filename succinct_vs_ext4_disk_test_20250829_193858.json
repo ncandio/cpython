@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-08-29T19:38:54.084895",
+  "test_sizes_mb": [
+    1,
+    10,
+    100
+  ],
+  "succinct_location": "/tmp/succinct_mount",
+  "ext4_location": "/tmp/compare_succinct_mount",
+  "results": [
+    {
+      "size_mb": 1,
+      "succinct_bytes": 1048576,
+      "ext4_bytes": 1048576,
+      "succinct_kb": 1024,
+      "ext4_kb": 1024,
+      "efficiency_percent": 0.0,
+      "succinct_create_time": 0.03,
+      "ext4_create_time": 0.002
+    },
+    {
+      "size_mb": 10,
+      "succinct_bytes": 10485760,
+      "ext4_bytes": 10485760,
+      "succinct_kb": 10240,
+      "ext4_kb": 10240,
+      "efficiency_percent": 0.0,
+      "succinct_create_time": 0.347,
+      "ext4_create_time": 0.025
+    },
+    {
+      "size_mb": 100,
+      "succinct_bytes": 104857600,
+      "ext4_bytes": 104857600,
+      "succinct_kb": 102400,
+      "ext4_kb": 102400,
+      "efficiency_percent": 0.0,
+      "succinct_create_time": 3.28,
+      "ext4_create_time": 0.225
+    }
+  ]
+}

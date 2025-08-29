@@ -1,0 +1,43 @@
+# Makefile for Succinct FUSE Filesystem
+
+CXX = g++
+CXXFLAGS = -std=c++17 -O2 -Wall -Wextra
+FUSEFLAGS = $(shell pkg-config fuse --cflags --libs)
+
+TARGET = succinct_fuse_fs
+SOURCES = succinct_fuse_fs.cpp
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+	$(CXX) $(CXXFLAGS) $(SOURCES) $(FUSEFLAGS) -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
+
+# Test commands
+test: $(TARGET)
+	mkdir -p /tmp/succinct_mount
+	mkdir -p /tmp/succinct_test
+	./$(TARGET) /tmp/succinct_mount &
+	sleep 2
+	echo "Testing filesystem operations..."
+	echo "Hello from succinct FUSE" > /tmp/succinct_mount/test.txt
+	mkdir /tmp/succinct_mount/testdir
+	echo "Nested content" > /tmp/succinct_mount/testdir/nested.txt
+	ls -la /tmp/succinct_mount/
+	cat /tmp/succinct_mount/test.txt
+	df /tmp/succinct_mount/
+	fusermount -u /tmp/succinct_mount
+
+install-deps:
+	sudo apt update
+	sudo apt install libfuse-dev pkg-config
+
+cleanup:
+	fusermount -u /tmp/succinct_mount 2>/dev/null || true
+	rmdir /tmp/succinct_mount 2>/dev/null || true
+	rmdir /tmp/succinct_test 2>/dev/null || true
+	killall $(TARGET) 2>/dev/null || true
+
+.PHONY: all clean test install-deps cleanup

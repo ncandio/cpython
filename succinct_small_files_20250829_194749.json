@@ -1,0 +1,58 @@
+{
+  "timestamp": "20250829_194749",
+  "test_type": "small_files_metadata_overhead",
+  "results": [
+    {
+      "config": "tiny",
+      "dirs": 5,
+      "files_per_dir": 10,
+      "total_files": 50,
+      "succinct_bytes": 2646,
+      "ext4_bytes": 27320,
+      "succinct_kb": 2,
+      "ext4_kb": 26,
+      "efficiency_percent": 90.31,
+      "succinct_time": 0.552,
+      "ext4_time": 0.005
+    },
+    {
+      "config": "small",
+      "dirs": 10,
+      "files_per_dir": 20,
+      "total_files": 200,
+      "succinct_bytes": 111316,
+      "ext4_bytes": 310372,
+      "succinct_kb": 108,
+      "ext4_kb": 303,
+      "efficiency_percent": 64.13,
+      "succinct_time": 2.081,
+      "ext4_time": 0.031
+    },
+    {
+      "config": "medium",
+      "dirs": 20,
+      "files_per_dir": 30,
+      "total_files": 600,
+      "succinct_bytes": 465932,
+      "ext4_bytes": 887857,
+      "succinct_kb": 455,
+      "ext4_kb": 867,
+      "efficiency_percent": 47.52,
+      "succinct_time": 8.154,
+      "ext4_time": 0.058
+    },
+    {
+      "config": "large",
+      "dirs": 50,
+      "files_per_dir": 50,
+      "total_files": 2500,
+      "succinct_bytes": 1056568,
+      "ext4_bytes": 1759305,
+      "succinct_kb": 1031,
+      "ext4_kb": 1718,
+      "efficiency_percent": 39.94,
+      "succinct_time": 24.296,
+      "ext4_time": 0.271
+    }
+  ]
+}

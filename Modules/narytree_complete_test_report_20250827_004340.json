@@ -1,0 +1,165 @@
+{
+  "test_suite": "N-ary Tree Complete API Tests",
+  "timestamp": "2025-08-27T00:43:40.048666",
+  "python_version": "3.15.0a0 (heads/feature/octrees-cpp17-dirty:1e52f7539f2, Aug 20 2025, 02:22:03) [GCC 12.2.0]",
+  "total_runtime": 0.019835948944091797,
+  "summary": {
+    "total_tests": 9,
+    "passed_tests": 9,
+    "failed_tests": 0,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "test_name": "Constructor Variations",
+      "status": "PASSED",
+      "duration": 2.2649765014648438e-05,
+      "details": {
+        "Empty constructor": "PASSED",
+        "String root": "PASSED",
+        "Integer root": "PASSED",
+        "Float root": "PASSED",
+        "List root": "PASSED",
+        "Dict root": "PASSED",
+        "None root": "PASSED",
+        "Boolean root": "PASSED"
+      }
+    },
+    {
+      "test_name": "Basic Operations",
+      "status": "PASSED",
+      "duration": 5.7220458984375e-06,
+      "details": {
+        "operations_tested": [
+          "empty",
+          "size",
+          "set_root"
+        ],
+        "data_types_tested": 8
+      }
+    },
+    {
+      "test_name": "Empty Tree Behavior",
+      "status": "PASSED",
+      "duration": 1.430511474609375e-06,
+      "details": {}
+    },
+    {
+      "test_name": "Data Integrity",
+      "status": "PASSED",
+      "duration": 3.5762786865234375e-06,
+      "details": {
+        "complex_data_structures": true,
+        "data_persistence": true
+      }
+    },
+    {
+      "test_name": "Memory Efficiency",
+      "status": "PASSED",
+      "duration": 0.003942251205444336,
+      "details": {
+        "trees_created": 1000,
+        "trees_deleted": 500,
+        "new_trees_created": 100
+      }
+    },
+    {
+      "test_name": "Performance Benchmarks",
+      "status": "PASSED",
+      "duration": 0.007788658142089844,
+      "details": {
+        "creation_benchmarks": [
+          [
+            100,
+            4.2438507080078125e-05
+          ],
+          [
+            500,
+            0.0002009868621826172
+          ],
+          [
+            1000,
+            0.00037384033203125
+          ],
+          [
+            5000,
+            0.006181478500366211
+          ]
+        ],
+        "operations_per_second": 21487213.1147541,
+        "total_operations": 20000
+      }
+    },
+    {
+      "test_name": "Thread Safety Basic",
+      "status": "PASSED",
+      "duration": 0.006342172622680664,
+      "details": {
+        "threads_completed": 5,
+        "errors_encountered": 0,
+        "thread_count": 5
+      }
+    },
+    {
+      "test_name": "Edge Cases",
+      "status": "PASSED",
+      "duration": 0.0007977485656738281,
+      "details": {
+        "test_cases": [
+          [
+            "Large string (1MB)",
+            "PASSED"
+          ],
+          [
+            "Deep nested dict",
+            "PASSED"
+          ],
+          [
+            "Rapid operations",
+            "PASSED"
+          ]
+        ]
+      }
+    },
+    {
+      "test_name": "Data Type Compatibility",
+      "status": "PASSED",
+      "duration": 4.315376281738281e-05,
+      "details": {
+        "types_tested": 25,
+        "results": {
+          "Type_0_NoneType": "PASSED",
+          "Type_1_bool": "PASSED",
+          "Type_2_bool": "PASSED",
+          "Type_3_int": "PASSED",
+          "Type_4_int": "PASSED",
+          "Type_5_int": "PASSED",
+          "Type_6_float": "PASSED",
+          "Type_7_float": "PASSED",
+          "Type_8_str": "PASSED",
+          "Type_9_str": "PASSED",
+          "Type_10_str": "PASSED",
+          "Type_11_list": "PASSED",
+          "Type_12_list": "PASSED",
+          "Type_13_list": "PASSED",
+          "Type_14_list": "PASSED",
+          "Type_15_tuple": "PASSED",
+          "Type_16_tuple": "PASSED",
+          "Type_17_tuple": "PASSED",
+          "Type_18_tuple": "PASSED",
+          "Type_19_dict": "PASSED",
+          "Type_20_dict": "PASSED",
+          "Type_21_dict": "PASSED",
+          "Type_22_set": "PASSED",
+          "Type_23_set": "PASSED",
+          "Type_24_frozenset": "PASSED"
+        }
+      }
+    }
+  ],
+  "performance_summary": {
+    "average_test_duration": 0.0021052625444200304,
+    "fastest_test": "Empty Tree Behavior",
+    "slowest_test": "Performance Benchmarks"
+  }
+}

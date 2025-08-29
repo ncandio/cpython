@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "narytree"
+version = "1.0.0"
+description = "High-performance N-ary tree data structure for Python"
+readme = "README.md"
+license = {text = "PSF-2.0"}
+authors = [
+    {name = "CPython Extension Developer", email = "developer@example.com"}
+]
+maintainers = [
+    {name = "CPython Extension Developer", email = "developer@example.com"}
+]
+keywords = ["tree", "data-structure", "nary", "algorithm", "graph"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Python Software Foundation License",
+    "Operating System :: OS Independent",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/python/cpython"
+Repository = "https://github.com/python/cpython.git"
+Documentation = "https://docs.python.org/"
+"Bug Reports" = "https://github.com/python/cpython/issues"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["narytree*"]
+
+[tool.cibuildwheel]
+build = "cp38-* cp39-* cp310-* cp311-* cp312-*"
+skip = "*-win32 *-manylinux_i686"
+
+[tool.cibuildwheel.linux]
+before-all = "yum install -y gcc-c++"
+
+[tool.cibuildwheel.macos]
+before-all = "brew install gcc"
+
+[tool.cibuildwheel.windows]
+before-all = "choco install visualstudio2019buildtools --package-parameters \"--add Microsoft.VisualStudio.Workload.VCTools\""

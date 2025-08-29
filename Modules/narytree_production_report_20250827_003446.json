@@ -1,0 +1,193 @@
+{
+  "test_suite": "N-ary Tree Production Readiness Tests",
+  "timestamp": "2025-08-27T00:34:46.964923",
+  "python_version": "3.15.0a0 (heads/feature/octrees-cpp17-dirty:1e52f7539f2, Aug 20 2025, 02:22:03) [GCC 12.2.0]",
+  "total_runtime": 0.04434084892272949,
+  "summary": {
+    "total_tests": 5,
+    "passed_tests": 5,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "production_ready": true
+  },
+  "key_metrics": {
+    "Tree Creation Scaling_max_size_tested": 50000,
+    "Tree Creation Scaling_peak_creation_rate": 2822546.4333781963,
+    "Real World Data Scenarios_scenarios_tested": 5,
+    "Concurrent Access Patterns_reader_workers": 5,
+    "Concurrent Access Patterns_writer_workers": 2,
+    "Concurrent Access Patterns_iterations_per_worker": 100,
+    "Concurrent Access Patterns_total_time": 0.0027773380279541016,
+    "Concurrent Access Patterns_errors": 0,
+    "Concurrent Access Patterns_success_rate": 100.0,
+    "Error Recovery Resilience_passed_tests": 3,
+    "Error Recovery Resilience_total_tests": 3,
+    "Throughput Limits_creation_throughput": 2388011.842404919,
+    "Throughput Limits_read_throughput": 30626535.23183644,
+    "Throughput Limits_write_throughput": 2605157.763975155,
+    "Throughput Limits_peak_memory_trees": 10000
+  },
+  "test_results": [
+    {
+      "test_name": "Tree Creation Scaling",
+      "status": "PASSED",
+      "metrics": {
+        "scaling_results": [
+          {
+            "size": 100,
+            "creation_time": 0.00010180473327636719,
+            "trees_per_second": 982272.599531616,
+            "operations_per_second": 21509251.282051284,
+            "memory_per_tree_estimate": 0.0010180473327636719
+          },
+          {
+            "size": 500,
+            "creation_time": 0.0001976490020751953,
+            "trees_per_second": 2529737.0325693605,
+            "operations_per_second": 51150048.780487806,
+            "memory_per_tree_estimate": 0.0003952980041503906
+          },
+          {
+            "size": 1000,
+            "creation_time": 0.0003542900085449219,
+            "trees_per_second": 2822546.4333781963,
+            "operations_per_second": 53773128.20512821,
+            "memory_per_tree_estimate": 0.0003542900085449219
+          },
+          {
+            "size": 5000,
+            "creation_time": 0.002220630645751953,
+            "trees_per_second": 2251612.6261541764,
+            "operations_per_second": 32140260.536398467,
+            "memory_per_tree_estimate": 0.0004441261291503906
+          },
+          {
+            "size": 10000,
+            "creation_time": 0.004096031188964844,
+            "trees_per_second": 2441387.660069849,
+            "operations_per_second": 30727501.83150183,
+            "memory_per_tree_estimate": 0.0004096031188964844
+          },
+          {
+            "size": 50000,
+            "creation_time": 0.02268528938293457,
+            "trees_per_second": 2204071.5088965725,
+            "operations_per_second": 24745156.34218289,
+            "memory_per_tree_estimate": 0.00045370578765869136
+          }
+        ],
+        "max_size_tested": 50000,
+        "peak_creation_rate": 2822546.4333781963
+      },
+      "notes": "",
+      "timestamp": "2025-08-27T00:34:46.950574"
+    },
+    {
+      "test_name": "Real World Data Scenarios",
+      "status": "PASSED",
+      "metrics": {
+        "scenarios_tested": 5,
+        "scenario_results": [
+          {
+            "name": "File System Tree",
+            "trees_created": 105,
+            "creation_time": 0.00013136863708496094,
+            "operations_time": 6.67572021484375e-06,
+            "total_operations": 210,
+            "status": "PASSED"
+          },
+          {
+            "name": "Organization Hierarchy",
+            "trees_created": 56,
+            "creation_time": 0.0013675689697265625,
+            "operations_time": 1.2159347534179688e-05,
+            "total_operations": 112,
+            "status": "PASSED"
+          },
+          {
+            "name": "Menu System",
+            "trees_created": 17,
+            "creation_time": 2.8848648071289062e-05,
+            "operations_time": 1.430511474609375e-06,
+            "total_operations": 34,
+            "status": "PASSED"
+          },
+          {
+            "name": "Category Tree",
+            "trees_created": 16,
+            "creation_time": 1.8596649169921875e-05,
+            "operations_time": 9.5367431640625e-07,
+            "total_operations": 32,
+            "status": "PASSED"
+          },
+          {
+            "name": "Decision Tree",
+            "trees_created": 12,
+            "creation_time": 8.58306884765625e-06,
+            "operations_time": 7.152557373046875e-07,
+            "total_operations": 24,
+            "status": "PASSED"
+          }
+        ]
+      },
+      "notes": "",
+      "timestamp": "2025-08-27T00:34:46.954946"
+    },
+    {
+      "test_name": "Concurrent Access Patterns",
+      "status": "PASSED",
+      "metrics": {
+        "reader_workers": 5,
+        "writer_workers": 2,
+        "iterations_per_worker": 100,
+        "total_time": 0.0027773380279541016,
+        "errors": 0,
+        "success_rate": 100.0
+      },
+      "notes": "",
+      "timestamp": "2025-08-27T00:34:46.957760"
+    },
+    {
+      "test_name": "Error Recovery Resilience",
+      "status": "PASSED",
+      "metrics": {
+        "recovery_tests": [
+          {
+            "test": "Invalid operations",
+            "status": "PASSED"
+          },
+          {
+            "test": "Large data handling",
+            "status": "PASSED"
+          },
+          {
+            "test": "Rapid operations",
+            "status": "PASSED"
+          }
+        ],
+        "passed_tests": 3,
+        "total_tests": 3
+      },
+      "notes": "",
+      "timestamp": "2025-08-27T00:34:46.958348"
+    },
+    {
+      "test_name": "Throughput Limits",
+      "status": "PASSED",
+      "metrics": {
+        "creation_throughput": 2388011.842404919,
+        "read_throughput": 30626535.23183644,
+        "write_throughput": 2605157.763975155,
+        "peak_memory_trees": 10000
+      },
+      "notes": "",
+      "timestamp": "2025-08-27T00:34:46.963697"
+    }
+  ],
+  "recommendations": [
+    "\u2713 All tests passed - Implementation is production ready",
+    "\u2713 Memory management appears efficient",
+    "\u2713 Concurrent access patterns work correctly",
+    "\u2713 Performance characteristics are acceptable"
+  ]
+}

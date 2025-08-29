@@ -1,0 +1,5 @@
+config,total_files,succinct_kb,ext4_kb,efficiency_percent
+tiny,50,2,26,90.31
+small,200,108,303,64.13
+medium,600,455,867,47.52
+large,2500,1031,1718,39.94
