@@ -1,0 +1,43 @@
+# Makefile for Succinct Filesystem Kernel Module
+
+obj-m := succinct_fs.o
+
+# Kernel build directory - adjust based on your system
+KDIR := /lib/modules/$(shell uname -r)/build
+
+# Module build directory
+PWD := $(shell pwd)
+
+# Default target
+all:
+	$(MAKE) -C $(KDIR) M=$(PWD) modules
+
+clean:
+	$(MAKE) -C $(KDIR) M=$(PWD) clean
+	rm -f modules.order Module.symvers
+
+install:
+	$(MAKE) -C $(KDIR) M=$(PWD) modules_install
+
+# Load module
+load:
+	sudo insmod succinct_fs.ko
+
+# Unload module  
+unload:
+	sudo rmmod succinct_fs
+
+# Create mount point and test
+test: load
+	sudo mkdir -p /mnt/succinct
+	sudo mount -t succinct none /mnt/succinct
+	echo "Succinct filesystem mounted at /mnt/succinct"
+	ls -la /mnt/succinct
+
+# Cleanup test
+cleanup:
+	sudo umount /mnt/succinct 2>/dev/null || true
+	sudo rmdir /mnt/succinct 2>/dev/null || true
+	$(MAKE) unload 2>/dev/null || true
+
+.PHONY: all clean install load unload test cleanup
