@@ -31,6 +31,9 @@ public:
 
 extern "C" {
 
+// Forward declaration - will be defined later
+extern PyTypeObject NodeType;
+
 // Python object structure for NaryTree
 typedef struct {
     PyObject_HEAD
@@ -521,7 +524,8 @@ static PyTypeObject NaryTreeType = {
     .tp_new = narytree_new,
 };
 
-static PyTypeObject NodeType = {
+// Define the NodeType (complete the forward declaration)
+PyTypeObject NodeType = {
     PyVarObject_HEAD_INIT(NULL, 0)
     .tp_name = "narytree.Node",
     .tp_basicsize = sizeof(NodeObject),
